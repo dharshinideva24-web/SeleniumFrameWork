@@ -28,7 +28,7 @@ public class AbstractComponents {
 	WebElement orderHeader;
 	
 	public void waitForElementtoAppear(By findBy) {
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
     wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
     
     wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
@@ -36,7 +36,7 @@ public class AbstractComponents {
 	}
 	
 	public void waitForWebElementtoAppear(WebElement findBy) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	    wait.until(ExpectedConditions.visibilityOf(findBy));
 	    
 	
