@@ -118,7 +118,7 @@ import rahulshettyacademy.pageobjects.LandingPage;
 	}
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 
 }
