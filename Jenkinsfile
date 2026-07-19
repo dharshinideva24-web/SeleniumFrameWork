@@ -11,11 +11,12 @@ pipeline {
         BROWSERSTACK_ACCESS_KEY = credentials('browserstack-accesskey')
     }
 
-   stage('Checkout') {
-    steps {
-        checkout scm
-    }
-}
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
