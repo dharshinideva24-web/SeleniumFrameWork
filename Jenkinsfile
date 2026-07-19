@@ -11,14 +11,11 @@ pipeline {
         BROWSERSTACK_ACCESS_KEY = credentials('browserstack-accesskey')
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    credentialsId: 'github-pat',
-                    url: 'https://github.com/dharshinideva24-web/SeleniumFrameworkProject.git'
-            }
-        }
+   stage('Checkout') {
+    steps {
+        checkout scm
+    }
+}
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
